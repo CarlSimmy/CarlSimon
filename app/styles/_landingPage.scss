@@ -1,7 +1,8 @@
-.landingPage__wrapper {
+.landingPage__wrapper-intro {
+  height: 100vh;
   margin-top: 11.2%; // Extra height of crystals in header.
   padding: 0 $Baseline;
-  &-intro {
+  &--text {
     font-family: 'Poppins Light';
     h1 {
       margin: 0;
@@ -101,7 +102,6 @@
   left: 34.5%;
 
   transition: left .6s;
-
   /* IMPORTANT, IF TOUCHSCREEN TYPE OUT ENTIRE TEXT SINCE
      IT'S NOT POSSIBLE TO HOVER ON PHONES. */
 }

@@ -21,7 +21,6 @@
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
     <!-- endbuild -->
   </head>
   <body>
@@ -30,15 +29,8 @@
     <![endif]-->
 
 
-
-
-
-
-
-
-
-
     <div class="header">
+      <img class="logotype" src="./images/logotype.svg" alt="Logotype">
       <div class="diamond diamond-1"></div>
       <div class="diamond diamond-2"></div>
       <div class="diamond diamond-3"></div>
@@ -47,8 +39,9 @@
       <div class="diamond diamond-6"></div>
     </div>
 
-    <div class="landingPage__wrapper">
-      <div class="landingPage__wrapper-intro">
+
+    <div class="landingPage__wrapper-intro">
+      <div class="landingPage__wrapper-intro--text">
         <h1>Welcome.</h1>
         <div class="landingPage__wrapper-desc">
           <!-- <div class="landingPage__wrapper-circle"></div> -->
@@ -87,11 +80,19 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="/bower_components/trianglify/dist/trianglify.min.js"></script>
+    <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
+    <!-- Indicators for ScrollMagic -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
     <!-- endbuild -->
   </body>
 </html>

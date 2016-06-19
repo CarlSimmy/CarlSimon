@@ -2,3 +2,9 @@
   from { font-size: 0px; }
   to { font-size: 36px; }
 }
+
+// SCROLLMAGIC ANIMATION CLASSES
+.menu-about.fade-out {
+  transition: all .5s;
+  opacity: 0;
+}
