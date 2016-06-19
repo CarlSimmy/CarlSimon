@@ -22,10 +22,15 @@
 
 .logotype {
   position: absolute;
-  height: 120px;
-  width: auto;
-  left: 1rem;
   z-index: 100;
+  top: -80px;
+  left: 1rem;
+
+  visibility: hidden;
+  width: auto;
+  height: 130px;
+
+  opacity: 0;
 }
 
 .diamond {
