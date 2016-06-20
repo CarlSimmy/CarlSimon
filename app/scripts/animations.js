@@ -1,7 +1,7 @@
 'use strict';
 
 /* GSAP ANIMATIONS */
-TweenLite.to($('.logotype'), 1, {autoAlpha: 1, y: 80, ease: Power2.easeOut}); // Fade logo in on load.
+TweenLite.to($('.logotype'), 2.5, {autoAlpha: 1, y: 80, ease: Power2.easeOut}); // Fade logo in on load.
 
 /* SCROLLMAGIC ANIMATIONS */
 var controller = new ScrollMagic.Controller();
