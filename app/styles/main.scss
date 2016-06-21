@@ -1,8 +1,44 @@
 // bower:scss
 // endbower
 
-// Baseline for fonts, margins etc.
-$Baseline: 24px;
+// Baseline for lineheight, margins etc.
+$Baseline: 1.25 * 2.4rem;
+
+// Type scales for text
+$type-scale: (
+  -1: 2.4rem / 1.333,                                         // small text
+  0: 2.4rem,                                                  // body text
+  1: 2.4rem * (1.333 * 1.333),                                // big text
+  2: 2.4rem * (1.333 * 1.333 * 1.333),                        // large heading
+  3: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333),                // sub heading
+  4: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333),        // main heading
+  5: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333 * 1.333) // page heading
+);
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+// Vertical Rhythm
+$height-scale: (
+  -1: $Baseline,
+  0: $Baseline,
+  1: $Baseline * 2,
+  2: $Baseline * 2,
+  3: $Baseline * 3,
+  4: $Baseline * 4,
+  5: $Baseline * 5
+);
+
+@function height-scale($level) {
+  @return map-get($height-scale, $level);
+}
+
+// Mixin to set the rhythm
+@mixin type-setting($level: 0) {
+  font-size: type-scale($level);
+  line-height: height-scale($level);
+}
 
 // Import fonts
 @import 'fonts.scss';
@@ -25,6 +61,8 @@ $Baseline: 24px;
 html {
   overflow: hidden;
   height: 100%;
+
+  font-size: 62.5%; // 1.5rem = 15px etc.
 }
 
 body {
@@ -34,6 +72,4 @@ body {
   height: 100%;
 
   background: #fcffb4;
-
-  line-height: $Baseline;
 }
