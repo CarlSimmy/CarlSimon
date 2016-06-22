@@ -1,7 +1,11 @@
 'use strict';
 
+// setInterval(() => {
+//   $('.lol').addClass
+// })
+
 /* GSAP ANIMATIONS */
-TweenLite.to($('.logotype'), 2, {autoAlpha: 1, y: 20, rotation: 0, ease: Power2.easeOut, delay: 0.5}); // Fade logo in on load.
+TweenLite.to(zest('.logotype'), 2, {autoAlpha: 1, y: 20, rotation: 0, ease: Power2.easeOut, delay: 0.5}); // Fade logo in on load.
 
 /* SCROLLMAGIC ANIMATIONS */
 var controller = new ScrollMagic.Controller();

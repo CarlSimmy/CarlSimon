@@ -77,61 +77,67 @@
 }
 
 /* To make the shapes more odd and make them fit better in each other */
-.diamond-1 svg {
-  width: 140%;
-  height: 140%;
+.diamond-1 {
+  svg, .shineDiv {
+    width: 140%;
+    height: 140%;
+  }
 }
 
-.diamond-2 svg {
-  width: 125%;
-  height: 125%;
+.diamond-2 {
+  svg, .shineDiv {
+    width: 125%;
+    height: 125%;
+  }
 }
 
-.diamond-3 svg {
-  width: 110%;
-  height: 110%;
+.diamond-3 {
+  svg, .shineDiv {
+    width: 110%;
+    height: 110%;
+  }
 }
 
-.diamond-4 svg {
-  width: 121%;
-  height: 121%;
+.diamond-4 {
+  svg, .shineDiv {
+    width: 121%;
+    height: 121%;
+  }
 }
 
-.diamond-5 svg {
-  width: 120%;
-  height: 120%;
+.diamond-5 {
+  svg, .shineDiv {
+    width: 120%;
+    height: 120%;
+  }
 }
 
-.diamond-6 svg {
-  width: 110%;
-  height: 145%;
+.diamond-6 {
+  svg, .shineDiv {
+    width: 110%;
+    height: 145%;
+  }
 }
 
-/* Maybe place an absolute layer above svgs??
-  .diamond svg {
-  z-index: 100;
-  color: #fff;
-  border-radius: 8px;
+.shineDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
   background-repeat: no-repeat;
   background-image: -webkit-linear-gradient(
-    top left,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.2) 37%,
-    rgba(255, 255, 255, 0.8) 45%,
-    rgba(255, 255, 255, 0.0) 50%
+  top left,
+  rgba(255, 255, 255, 0.0) 0%,
+  rgba(255, 255, 255, 0.1) 75%,
+  rgba(255, 255, 255, 0.6) 85%,
+  rgba(255, 255, 255, 0.0) 100%
   );
-  background-position: -100px -100px, 0 0;
-  background-size: 250% 250%, 100% 100%;
+  background-position: 250% 250%, 0 0;
+  background-size: 250% 250%;
   transition: background-position 0s ease;
 }
 
-.diamond svg:hover,
-.diamond svg:focus {
-  color: #fff;
-  background-position: 0 0, 0 0;
-  transition-duration: 0.5s;
+.shineDiv.shine {
+  background-position: 400px 100px, 0 0;
+  transition-duration: 2s;
 }
-
-.diamond svg:active {
-    top:1px;
-} */

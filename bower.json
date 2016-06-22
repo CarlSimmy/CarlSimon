@@ -2,10 +2,9 @@
   "name": "simonwebgen",
   "private": true,
   "dependencies": {
+    "gsap": "^1.18.5",
     "modernizr": "~2.8.1",
     "scrollmagic": "^2.0.5",
-    "trianglify": "^0.4.0",
-    "jquery": "^3.0.0",
-    "gsap": "^1.18.5"
+    "trianglify": "^0.4.0"
   }
 }

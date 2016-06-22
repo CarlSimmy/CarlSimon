@@ -19,6 +19,10 @@ function createTrianglePatterns(element, colorX, colorY) {
   }
 
   document.querySelector(clsName).appendChild(pattern.svg()); // Appending svgs as childs
+
+  let shineDiv = document.createElement('div');
+  shineDiv.className = 'shineDiv';
+  document.querySelector(clsName).appendChild(shineDiv);
 }
 
 
@@ -48,7 +52,8 @@ function deleteHeaderTriangles() {
   // Checking if a div actually contains svgs before looping to remove.
   if ( document.getElementsByClassName('diamond-1')[0].children.length ) {
     findHeaderTriangles().forEach((triangle) => {
-      triangle.removeChild(triangle.firstChild);
+      while (triangle.hasChildNodes())
+        triangle.removeChild(triangle.firstChild);
     });
   }
 
