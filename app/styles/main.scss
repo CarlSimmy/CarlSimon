@@ -40,6 +40,9 @@ $height-scale: (
   line-height: height-scale($level);
 }
 
+//Import normalize
+@import 'normalize.scss';
+
 // Import fonts
 @import 'fonts.scss';
 

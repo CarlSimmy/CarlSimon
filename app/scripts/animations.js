@@ -8,14 +8,14 @@ setInterval(() => {
   let currentShineDiv = $('.shineDiv')[Math.floor((Math.random() * $('.shineDiv').length) + 0)];
   currentShineDiv.className = 'shineDiv ' + shineDivTypes[Math.floor((Math.random() * shineDivTypes.length) + 0)];
   currentShineDiv.classList.toggle('shine');
-}, Math.floor((Math.random() * 3800) + 2400));
+}, Math.floor((Math.random() * 3500) + 2100));
 
 // setInterval(() => {
 //   $('.shineDiv')[Math.floor((Math.random() * $('.shineDiv').length) + 0)].classList.toggle('shine');
 // }, Math.floor((Math.random() * 10000) + 7100));
 
 /* GSAP ANIMATIONS */
-TweenLite.to($('.logotype'), 2, { autoAlpha: 1, y: -35, rotation: 0, ease: Power2.easeOut, delay: 0.5 }); // Fade logo in on load.
+TweenLite.to(('.logotype'), 2, { autoAlpha: 1, y: -35, rotation: 0, ease: Power2.easeOut, delay: 0.5 }); // Fade logo in on load.
 
 /* SCROLLMAGIC ANIMATIONS */
 var controller = new ScrollMagic.Controller();

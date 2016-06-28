@@ -41,6 +41,5 @@
     }
   },
   "dependencies": {
-    "normalize-range": "^0.1.2"
   }
 }
