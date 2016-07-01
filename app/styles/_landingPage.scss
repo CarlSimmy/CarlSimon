@@ -1,70 +1,93 @@
 .landingPage__wrapper-intro {
   height: 100vh;
-  margin-top: 100px; // Extra height of crystals in header.
+  margin-top: 90px; // Extra height of crystals in header.
   padding: 0 $Baseline;
-  &--text {
-    display: flex;
+  @media ( max-width: 400px ) {
+    padding: 0 $Baseline / 2;
+  }
+}
 
-    font-family: 'Crystal Sky';
-    h1 {
-      align-self: flex-start;
-      margin: $Baseline 0 $Baseline / 2 0;
+.landingPage__wrapper-intro--text {
+  position: relative;
 
-      color: #a2555f;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  min-height: 40rem;
+  margin: 0 auto;
 
-      font-size: 25rem;
+  font-family: 'Crystal Sky';
+  h1 {
+    align-self: flex-start;
+    margin: 0;
+    margin-top: $Baseline * 1.5;
 
-      @include type-setting(5);
-      font-size: 25rem; // Fix type-setting for this instead of just 25 rem.
+    color: #a2555f;
+    // background: rgba(255, 149, 172, .35);
+
+    font-size: 25rem;
+    line-height: 15rem;
+    @media ( min-width: 1600px ) {
+      margin-top: $Baseline * 3;
+    }
+    @media ( max-width: 900px ) {
+      margin-top: 3rem;
+      margin-bottom: -1rem;
+
+      font-size: 20rem;
+    }
+    @media ( max-width: 750px ) {
+      margin-top: 2rem;
+      margin-bottom: -1.5rem;
+
+      font-size: 18rem;
+    }
+    @media ( max-width: 750px ) {
+      margin-top: 0;
+    }
+    @media ( max-width: 550px ) {
+      margin-top: -1rem;
+      margin-bottom: -2rem;
+
+      font-size: 15rem;
     }
   }
 }
 
-.landingPage__wrapper-divider {
-  width: 6px;
-  height: 40rem;
+.landingPage__wrapper-divider--horizontal {
+  align-self: center;
+  width: 80%;
+  margin-left: $Baseline;
 
   background: #ada0a6;
+  border: 1px solid #9d90a2;
+  border-radius: 50%;
 
-  transform: rotate(40deg);
+  transform: rotate(0deg);
+  @media ( max-width: 750px ) {
+    margin-left: $Baseline * 2;
+  }
 }
 
 .landingPage__wrapper-desc {
-  align-self: flex-end;
+  align-self: center;
+  max-width: 60%;
   margin: 0;
+  margin-top: $Baseline;
 
   color: #5c89ab;
+  // background: rgba(177, 199, 184, .35); Place text absolute on relative background and cut background to crystal shapes?
 
   font-family: 'Crystal Sky Caps';
-  word-break: break;
+  font-weight: bold;
 
   @include type-setting(1);
-}
-
-.landingPage__wrapper-circle {
-  position: relative;
-  top: -170px;
-
-  float: right;
-  width: 0;
-  height: 0;
-
-  border: 170px solid transparent;
-  border-bottom: 120px solid red;
-
-  shape-outside: 500px;
-  &:after {
-    position: absolute;
-    top: 120px;
-    left: -170px;
-
-    width: 0;
-    height: 0;
-
-    border: 170px solid transparent;
-    border-top: 210px solid red;
-
-    content: '';
+  @media ( max-width: 750px ) {
+    @include type-setting(0);
+  }
+  @media ( max-width: 550px ) {
+    max-width: 100%;
+    margin-top: $Baseline * 1.5;
   }
 }
 
@@ -74,7 +97,7 @@
   .menu-about {
     position: relative;
 
-    width: 18rem;
+    width: 20rem;
     height: 100%;
 
     background: white;
@@ -88,22 +111,25 @@
     top: 50%;
     left: 50%;
 
-    font-family: 'Poppins Medium';
-    font-size: $Baseline * 3.5;
-    line-height: $Baseline * 3.5;
+    font-family: 'Crystal Sky Caps';
+    font-weight: bold;
 
     transition: left .6s; // Transition back in after hover
-    transform: translate(-25%, -25%);
+    transform: translate(-40%, -40%);
+
+    @include type-setting(5);
   }
   .menu-about__text--small {
     position: absolute;
-    top: 61.5%;
-    left: 57%;
+    top: 58%;
+    left: 61%;
 
-    font-family: 'Poppins';
+    font-family: 'Crystal Sky Caps';
     font-size: 0;
+    font-weight: bold;
+    line-height: $Baseline * 3;
 
-    transform: translate(-25%, -25%);
+    transform: translate(-40%, -40%);
   }
 }
 
@@ -112,7 +138,7 @@
 }
 
 .menu-about:hover .menu-about__text {
-  left: 34.5%;
+  left: 36%;
 
   transition: left .6s;
   /* IMPORTANT, IF TOUCHSCREEN TYPE OUT ENTIRE TEXT SINCE

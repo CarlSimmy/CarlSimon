@@ -8,7 +8,7 @@ setInterval(() => {
   let currentShineDiv = $('.shineDiv')[Math.floor((Math.random() * $('.shineDiv').length) + 0)];
   currentShineDiv.className = 'shineDiv ' + shineDivTypes[Math.floor((Math.random() * shineDivTypes.length) + 0)];
   currentShineDiv.classList.toggle('shine');
-}, Math.floor((Math.random() * 3500) + 2100));
+}, Math.floor((Math.random() * 2900) + 1800));
 
 // setInterval(() => {
 //   $('.shineDiv')[Math.floor((Math.random() * $('.shineDiv').length) + 0)].classList.toggle('shine');
@@ -23,8 +23,9 @@ var controller = new ScrollMagic.Controller();
 var testScene = new ScrollMagic.Scene({
   triggerElement: '.menu-about',
   offset: 100
-}).setClassToggle('.menu-about', 'fade-out').addIndicators({
+}).setClassToggle('.menu-about', 'fade-out').addTo(controller);
+/* .addIndicators({
   name: 'Fade out',
   colorTrigger: 'black',
   indent: 10
-}).addTo(controller);
+}) */

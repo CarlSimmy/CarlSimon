@@ -34,13 +34,13 @@
   }
 
   @media ( max-width: 500px ) and ( min-width: 400px ) {
-    height: 12vh;
-    min-height: 130px;
+    height: 13vh;
+    min-height: 150px;
   }
 
   @media ( max-width: 400px ) {
-    height: 10vh;
-    min-height: 130px;
+    height: 11vh;
+    min-height: 140px;
   }
 }
 
@@ -168,8 +168,8 @@
     background-image: linear-gradient(
     to bottom right,
     rgba(210, 193, 197, .0) 20%,
-    rgba(220, 204, 208, .7) 75%,
-    rgba(230, 228, 215, .1) 85%,
+    rgba(220, 204, 208, .8) 75%,
+    rgba(230, 228, 215, .2) 85%,
     rgba(162, 186, 189, .0) 90%
     );
     background-position: 200% 200%, 0 0;
@@ -178,8 +178,8 @@
     background-image: linear-gradient(
     to top left,
     rgba(162, 186, 189, .0) 20%,
-    rgba(230, 228, 215, .7) 75%,
-    rgba(220, 204, 208, .1) 85%,
+    rgba(230, 228, 215, .8) 75%,
+    rgba(220, 204, 208, .2) 85%,
     rgba(210, 193, 197, .0) 100%
     );
     background-position: -70% -50%, 0 0;
@@ -189,11 +189,11 @@
 .shineDiv.normal.shine {
   background-position: -70% -50%, 0 0;
 
-  transition-duration: 2s;
+  transition-duration: 1.8s;
 }
 
 .shineDiv.reverse.shine { /* Def needs tweaking */
   background-position: 200% 200%, 0 0;
 
-  transition-duration: 2.3s;
+  transition-duration: 2.1s;
 }
