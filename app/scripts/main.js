@@ -1,6 +1,7 @@
 'use strict';
 
 function createTrianglePatterns(element, colorX, colorY) {
+  if ( !element ) return false;
 
   let pattern = Trianglify({
     width: element.offsetWidth,
@@ -32,7 +33,7 @@ function createTrianglePatterns(element, colorX, colorY) {
 function findHeaderTriangles() {
   let triangleArray = [];
 
-  for ( let i = 1; i <= document.getElementsByClassName('diamond').length; i++ ) {
+  for ( let i = 1; i <= $('.diamond').length; i++ ) {
     let elementClass = `diamond-${i}`;
     triangleArray.push(document.getElementsByClassName(elementClass)[0]);
   }
@@ -50,7 +51,7 @@ function createHeaderTriangles() {
 /* Deleting all svgs appended to the header triangle divs (used when re-rendering) */
 function deleteHeaderTriangles() {
   // Checking if a div actually contains svgs before looping to remove.
-  if ( document.getElementsByClassName('diamond-1')[0].children.length ) {
+  if ( $('.diamond-1')[0].children.length ) {
     findHeaderTriangles().forEach((triangle) => {
       while (triangle.hasChildNodes())
         triangle.removeChild(triangle.firstChild);

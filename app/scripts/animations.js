@@ -1,5 +1,6 @@
 'use strict';
 
+
 /* INTERVALS TO TOGGLE SHINE CLASS ON CRYSTALS */
 var shineDivTypes = ['normal', 'reverse'];
 var shineTypes = ['shine'];
@@ -15,15 +16,15 @@ setInterval(() => {
 // }, Math.floor((Math.random() * 10000) + 7100));
 
 /* GSAP ANIMATIONS */
-TweenLite.to(('.logotype'), 2, { autoAlpha: 1, y: -35, rotation: 0, ease: Power2.easeOut, delay: 0.5 }); // Fade logo in on load.
+TweenLite.to($('.logotype'), 2, { autoAlpha: 1, y: -35, rotation: 0, ease: Power2.easeOut, delay: 0.5 }); // Fade logo in on load.
 
 /* SCROLLMAGIC ANIMATIONS */
 var controller = new ScrollMagic.Controller();
 
-var testScene = new ScrollMagic.Scene({
+/* var testScene = new ScrollMagic.Scene({
   triggerElement: '.menu-about',
   offset: 100
-}).setClassToggle('.menu-about', 'fade-out').addTo(controller);
+}).setClassToggle('.menu-about', 'fade-out').addTo(controller); */
 /* .addIndicators({
   name: 'Fade out',
   colorTrigger: 'black',
