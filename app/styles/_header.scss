@@ -5,14 +5,50 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 240px;
+  height: 20vh;
+  min-height: 200px;
+
+  @media ( min-width: 2300px ) {
+    height: 24vh;
+    min-height: 265px;
+  }
+
+  @media ( min-width: 2000px ) and ( max-width: 2300px ) {
+    height: 22vh;
+    min-height: 240px;
+  }
+
+  @media ( min-width: 1700px  ) and ( max-width: 2000px ) {
+    height: 21vh;
+    min-height: 220px;
+  }
+
+  @media ( max-width: 850px ) and ( min-width: 650px ) {
+    height: 17vh;
+    min-height: 200px;
+  }
+
+  @media ( max-width: 650px ) and ( min-width: 500px ) {
+    height: 14vh;
+    min-height: 160px;
+  }
+
+  @media ( max-width: 500px ) and ( min-width: 400px ) {
+    height: 12vh;
+    min-height: 130px;
+  }
+
+  @media ( max-width: 400px ) {
+    height: 10vh;
+    min-height: 130px;
+  }
 }
 
 .logotype {
   position: absolute;
   z-index: 5;
   top: 40px;
-  left: 10rem;
+  left: 10vw;
 
   visibility: hidden;
   width: auto;
@@ -62,6 +98,10 @@
   left: 62%;
 
   clip-path: polygon(100% 0, 30% 0, 30% 45%, 0 80%, 10% 90%, 100% 100%);
+
+  @media ( max-width: 500px ) {
+    clip-path: polygon(100% 0, 30% 0, 30% 45%, 0 83%, 10% 90%, 100% 100%);
+  }
 }
 
 /* To make the shapes more odd and make them fit better in each other */

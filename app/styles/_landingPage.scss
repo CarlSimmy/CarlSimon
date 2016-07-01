@@ -1,32 +1,44 @@
 .landingPage__wrapper-intro {
   height: 100vh;
-  margin-top: 45px; // Extra height of crystals in header.
+  margin-top: 100px; // Extra height of crystals in header.
   padding: 0 $Baseline;
   &--text {
-    font-family: 'Poppins Light';
+    display: flex;
+
+    font-family: 'Crystal Sky';
     h1 {
-      margin: $Baseline / 2 0;
+      align-self: flex-start;
+      margin: $Baseline 0 $Baseline / 2 0;
 
       color: #a2555f;
-      text-shadow: 1px 1px 3px #312c2c;
 
-      text-align: center;
-
-      transform: rotate(3deg);
+      font-size: 25rem;
 
       @include type-setting(5);
+      font-size: 25rem; // Fix type-setting for this instead of just 25 rem.
     }
   }
 }
 
+.landingPage__wrapper-divider {
+  width: 6px;
+  height: 40rem;
+
+  background: #ada0a6;
+
+  transform: rotate(40deg);
+}
+
 .landingPage__wrapper-desc {
+  align-self: flex-end;
   margin: 0;
 
   color: #5c89ab;
 
+  font-family: 'Crystal Sky Caps';
   word-break: break;
 
-  @include type-setting(0);
+  @include type-setting(1);
 }
 
 .landingPage__wrapper-circle {

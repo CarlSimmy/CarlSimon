@@ -8,11 +8,11 @@ $Baseline: 1.25 * 2.4rem;
 $type-scale: (
   -1: 2.4rem / 1.333,                                         // small text
   0: 2.4rem,                                                  // body text
-  1: 2.4rem * (1.333 * 1.333),                                // big text
-  2: 2.4rem * (1.333 * 1.333 * 1.333),                        // large heading
-  3: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333),                // sub heading
-  4: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333),        // main heading
-  5: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333 * 1.333) // page heading
+  1: 2.4rem * 1.333,                                          // big text
+  2: 2.4rem * (1.333 * 1.333),                                // large heading
+  3: 2.4rem * (1.333 * 1.333 * 1.333),                        // sub heading
+  4: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333),                // main heading
+  5: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333)         // page heading
 );
 
 @function type-scale($level) {
@@ -23,7 +23,7 @@ $type-scale: (
 $height-scale: (
   -1: $Baseline,
   0: $Baseline,
-  1: $Baseline * 2,
+  1: $Baseline * 1.5,
   2: $Baseline * 2,
   3: $Baseline * 3,
   4: $Baseline * 4,
