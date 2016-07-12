@@ -8,3 +8,16 @@
   transition: all .5s;
   opacity: 0;
 }
+
+.particle-delimiter {
+  width: 100vw;
+  height: 10rem;
+
+  &.--landing {
+    margin: 3rem -3rem;
+  }
+
+  &.--menu {
+    margin: 3.5rem -3rem;
+  }
+}

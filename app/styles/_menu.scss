@@ -63,7 +63,7 @@
 .menu-portfolio:hover .menu-portfolio__text--small,
 .menu-work:hover .menu-work__text--small,
 .menu-contact:hover .menu-contact__text--small {
-  animation: grow .8s .25s forwards;
+  animation: grow .4s .2s forwards;
 }
 
 .menu-about:hover .menu-about__text,
@@ -72,7 +72,7 @@
 .menu-contact:hover .menu-contact__text {
   left: 40%;
 
-  transition: left .6s;
+  transition: left .5s;
   /* IMPORTANT, IF TOUCHSCREEN TYPE OUT ENTIRE TEXT SINCE
      IT'S NOT POSSIBLE TO HOVER ON PHONES. */
 }

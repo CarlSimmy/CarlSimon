@@ -1,7 +1,8 @@
 'use strict';
 
 /* PARTICLES.JS */
-particlesJS.load('particles-js', 'particles.json');
+particlesJS.load('particles-landing', 'particles-landing.json');
+particlesJS.load('particles-menu', 'particles-menu.json');
 
 /* INTERVALS TO TOGGLE SHINE CLASS ON CRYSTALS */
 var shineDivTypes = ['normal', 'reverse'];

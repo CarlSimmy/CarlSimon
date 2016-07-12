@@ -64,6 +64,7 @@ $height-scale: (
 
 html {
   overflow: hidden;
+  width: 100%;
   height: 100%;
 
   font-size: 62.5%; // 1.5rem = 15px etc.
@@ -74,7 +75,15 @@ body {
   overflow-y: auto;
   width: 100%;
   height: 100%;
-
   // background: #fcffb4; Old background
+
   background: rgb(252, 255, 187);
+}
+
+.page-container {
+  margin-top: $Baseline * 3; // Extra height of crystals in header.
+  padding: $Baseline;
+  @media ( max-width: 400px ) {
+    padding: 0 $Baseline / 2;
+  }
 }
