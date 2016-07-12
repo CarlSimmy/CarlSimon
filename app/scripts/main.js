@@ -71,8 +71,8 @@ function reRenderHeaderTriangles() {
 
 /* To create the menu triangles */
 function createMenuTriangles() {
-  /* [].slice.call converts the nodelist to an array */
-  [].slice.call($('.wrapper-menu')[0].children).forEach((menuTriangle) => {
+  /* Array.from convert the nodelist to an array */
+  Array.from($('.wrapper-menu')[0].children).forEach((menuTriangle) => {
     createTrianglePatterns(menuTriangle, 'RdYlGn', 'BuPu');
   })
 }
