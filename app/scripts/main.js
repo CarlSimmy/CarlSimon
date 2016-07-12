@@ -71,8 +71,10 @@ function reRenderHeaderTriangles() {
 
 /* To create the menu triangles */
 function createMenuTriangles() {
-  let elementClass = 'menu-about';
-  createTrianglePatterns(document.getElementsByClassName(elementClass)[0], 'RdYlGn', 'BuPu');
+  /* [].slice.call converts the nodelist to an array */
+  [].slice.call($('.wrapper-menu')[0].children).forEach((menuTriangle) => {
+    createTrianglePatterns(menuTriangle, 'RdYlGn', 'BuPu');
+  })
 }
 
 /* To render all triangles, even ones that don't need to scale on resize */

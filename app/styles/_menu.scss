@@ -1,0 +1,78 @@
+.wrapper-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 260px;
+  .menu-about,
+  .menu-portfolio,
+  .menu-work,
+  .menu-contact {
+    position: relative;
+
+    width: 23rem;
+    height: 100%;
+    margin: 0 $Baseline 0 0;
+
+    background: white;
+
+    cursor: pointer;
+
+    clip-path: polygon(25% 12%, 59% 21%, 91% 5%, 100% 64%, 71% 100%, 33% 95%, 6% 56%);
+  }
+  .menu-portfolio,
+  .menu-work,
+  .menu-contact {
+    margin: 0rem $Baseline;
+  }
+  .menu-about__text,
+  .menu-portfolio__text,
+  .menu-work__text,
+  .menu-contact__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    font-family: 'Crystal Sky Caps';
+    font-weight: bold;
+
+    transition: left .6s; // Transition back in after hover
+    transform: translate(-40%, -40%);
+
+    @include type-setting(5);
+  }
+  .menu-about__text--small,
+  .menu-portfolio__text--small,
+  .menu-work__text--small,
+  .menu-contact__text--small {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+
+    font-family: 'Crystal Sky Alt';
+    font-size: 0;
+    font-weight: bold;
+    line-height: $Baseline * 3;
+    letter-spacing: 2px;
+
+    transform: translate(-40%, -40%);
+  }
+}
+
+.menu-about:hover .menu-about__text--small,
+.menu-portfolio:hover .menu-portfolio__text--small,
+.menu-work:hover .menu-work__text--small,
+.menu-contact:hover .menu-contact__text--small {
+  animation: grow .8s .25s forwards;
+}
+
+.menu-about:hover .menu-about__text,
+.menu-portfolio:hover .menu-portfolio__text,
+.menu-work:hover .menu-work__text,
+.menu-contact:hover .menu-contact__text {
+  left: 40%;
+
+  transition: left .6s;
+  /* IMPORTANT, IF TOUCHSCREEN TYPE OUT ENTIRE TEXT SINCE
+     IT'S NOT POSSIBLE TO HOVER ON PHONES. */
+}

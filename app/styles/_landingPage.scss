@@ -1,4 +1,4 @@
-.landingPage__wrapper-intro {
+.landingPage__wrapper {
   margin-top: 90px; // Extra height of crystals in header.
   padding: 0 $Baseline $Baseline $Baseline;
   @media ( max-width: 400px ) {
@@ -6,7 +6,7 @@
   }
 }
 
-.landingPage__wrapper-intro--text {
+.landingPage__wrapper-intro-text {
   position: relative;
 
   display: flex;
@@ -89,56 +89,7 @@
   }
 }
 
-.landingPage__wrapper-menu {
-  width: 100%;
-  height: 260px;
-  .menu-about {
-    position: relative;
-
-    width: 20rem;
-    height: 100%;
-
-    background: white;
-
-    cursor: pointer;
-
-    clip-path: polygon(25% 12%, 59% 21%, 91% 5%, 100% 64%, 71% 100%, 33% 95%, 6% 56%);
-  }
-  .menu-about__text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    font-family: 'Crystal Sky Caps';
-    font-weight: bold;
-
-    transition: left .6s; // Transition back in after hover
-    transform: translate(-40%, -40%);
-
-    @include type-setting(5);
-  }
-  .menu-about__text--small {
-    position: absolute;
-    top: 58%;
-    left: 61%;
-
-    font-family: 'Crystal Sky Caps';
-    font-size: 0;
-    font-weight: bold;
-    line-height: $Baseline * 3;
-
-    transform: translate(-40%, -40%);
-  }
-}
-
-.menu-about:hover .menu-about__text--small {
-  animation: grow .8s .25s forwards;
-}
-
-.menu-about:hover .menu-about__text {
-  left: 36%;
-
-  transition: left .6s;
-  /* IMPORTANT, IF TOUCHSCREEN TYPE OUT ENTIRE TEXT SINCE
-     IT'S NOT POSSIBLE TO HOVER ON PHONES. */
+.particle-delimiter {
+  height: 10rem;
+  margin: $Baseline -3rem;
 }

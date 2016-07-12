@@ -1,5 +1,7 @@
 'use strict';
 
+/* PARTICLES.JS */
+particlesJS.load('particles-js', 'particles.json');
 
 /* INTERVALS TO TOGGLE SHINE CLASS ON CRYSTALS */
 var shineDivTypes = ['normal', 'reverse'];
