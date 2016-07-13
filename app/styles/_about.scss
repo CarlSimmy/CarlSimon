@@ -1,0 +1,31 @@
+.about-section,
+.portfolio-section,
+.work-section,
+.contact-section {
+  padding: 3rem 0;
+
+  letter-spacing: 5px;
+}
+
+.about-header,
+.portfolio-header,
+.work-header,
+.contact-header {
+  margin: 0;
+
+  font-family: 'Crystal Sky Alt';
+  text-align: center;
+
+  @include type-setting(7);
+}
+
+.about-text,
+.portfolio-text,
+.work-text,
+.contact-text {
+  font-family: 'Crystal Sky Caps';
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  @include type-setting(1);
+}

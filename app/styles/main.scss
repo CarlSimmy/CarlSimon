@@ -6,13 +6,15 @@ $Baseline: 1.25 * 2.4rem;
 
 // Type scales for text
 $type-scale: (
-  -1: 2.4rem / 1.333,                                         // small text
-  0: 2.4rem,                                                  // body text
-  1: 2.4rem * 1.333,                                          // big text
-  2: 2.4rem * (1.333 * 1.333),                                // large heading
-  3: 2.4rem * (1.333 * 1.333 * 1.333),                        // sub heading
-  4: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333),                // main heading
-  5: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333)         // page heading
+  -1: 2.4rem / 1.333,                                                  // small text
+  0: 2.4rem,                                                           // body text
+  1: 2.4rem * 1.333,                                                   // big text
+  2: 2.4rem * (1.333 * 1.333),                                         // large heading
+  3: 2.4rem * (1.333 * 1.333 * 1.333),                                 // sub heading
+  4: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333),                         // main heading
+  5: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333),                 // page heading
+  6: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333 * 1.333),         // page heading
+  7: 2.4rem * (1.333 * 1.333 * 1.333 * 1.333 * 1.333 * 1.333 * 1.333)  // page heading
 );
 
 @function type-scale($level) {
@@ -27,7 +29,9 @@ $height-scale: (
   2: $Baseline * 2,
   3: $Baseline * 3,
   4: $Baseline * 4,
-  5: $Baseline * 5
+  5: $Baseline * 5,
+  6: $Baseline * 6,
+  7: $Baseline * 7
 );
 
 @function height-scale($level) {
@@ -40,7 +44,7 @@ $height-scale: (
   line-height: height-scale($level);
 }
 
-//Import normalize
+// Import normalize
 @import 'normalize.scss';
 
 // Import fonts
@@ -53,6 +57,9 @@ $height-scale: (
 @import '_header.scss';
 @import '_landingPage.scss';
 @import '_menu.scss';
+
+// Different sections
+@import '_about.scss';
 
 .browserupgrade {
   margin: .2em 0;
