@@ -1,5 +1,12 @@
 'use strict';
 
+/* HASH SCROLLING ANIMATION */
+/* Get working to find hash and then add translate to correct offset position.
+document.querySelector('.wrapper-menu').querySelectorAll('a').onclick = (event) => {
+  console.log(event.path[0].baseURI);
+  event.preventDefault();
+} */
+
 /* PARTICLES.JS */
 particlesJS.load('particles-landing', 'particles-landing.json');
 particlesJS.load('particles-menu', 'particles-menu.json');
