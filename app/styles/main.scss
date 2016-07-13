@@ -60,6 +60,9 @@ $height-scale: (
 
 // Different sections
 @import '_about.scss';
+@import '_portfolio.scss';
+@import '_work.scss';
+@import '_contact.scss';
 
 .browserupgrade {
   margin: .2em 0;
