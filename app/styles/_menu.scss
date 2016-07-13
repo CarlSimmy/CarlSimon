@@ -4,6 +4,13 @@
   justify-content: center;
   width: 100%;
   height: 260px;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+  }
+
   .menu-about,
   .menu-portfolio,
   .menu-work,
