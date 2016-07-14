@@ -1,4 +1,5 @@
 .work-section {
+  max-width: 1440px;
   padding: 3rem 0;
 
   letter-spacing: 5px;
@@ -14,8 +15,11 @@
 }
 
 .work-text {
+  margin: 0;
+
   font-family: 'Crystal Sky Caps';
   font-weight: bold;
+  text-align: justify;
   letter-spacing: 1px;
 
   @include type-setting(1);

@@ -52,25 +52,25 @@
 
         <div class="wrapper-menu">
           <!-- Menu About -->
-          <a href="#about" class="menu-about">
+          <a href="#about" onclick="scrollToHash('#about')" class="menu-about">
             <span class="menu-about__text">A</span>
             <span class="menu-about__text--small">bout.</span>
           </a>
 
           <!-- Menu Portfolio -->
-          <a href="#portfolio" class="menu-portfolio">
+          <a href="#portfolio" onclick="scrollToHash('#portfolio')" class="menu-portfolio">
             <span class="menu-portfolio__text">P</span>
             <span class="menu-portfolio__text--small">ortfolio.</span>
           </a>
 
           <!-- Menu Work -->
-          <a href="#work" class="menu-work">
+          <a href="#work" onclick="scrollToHash('#work')" class="menu-work">
             <span class="menu-work__text">W</span>
             <span class="menu-work__text--small">ork.</span>
           </a>
 
           <!-- Menu Contact -->
-          <a href="#contact" class="menu-contact">
+          <a href="#contact" onclick="scrollToHash('#contact')" class="menu-contact">
             <span class="menu-contact__text">C</span>
             <span class="menu-contact__text--small">ontact.</span>
           </a>
@@ -146,6 +146,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="/bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
     <script src="/bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script src="/bower_components/trianglify/dist/trianglify.min.js"></script>
     <script src="/bower_components/particles.js/particles.js"></script>

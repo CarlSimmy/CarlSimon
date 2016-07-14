@@ -10,7 +10,8 @@
 
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
+  align-items: center;
+  max-width: 1440px;
 
   font-family: 'Crystal Sky';
   h1 {
@@ -51,7 +52,6 @@
 }
 
 .landingPage__wrapper-divider--horizontal {
-  align-self: center;
   width: 80%;
   margin-left: $Baseline;
 
@@ -66,8 +66,6 @@
 }
 
 .landingPage__wrapper-desc {
-  letter-spacing: 1px;
-  align-self: center;
   max-width: 60%;
   margin: 0;
   margin-top: $Baseline;
@@ -77,6 +75,8 @@
 
   font-family: 'Crystal Sky Caps';
   font-weight: bold;
+  text-align: justify;
+  letter-spacing: 1px;
 
   @include type-setting(1);
   @media ( max-width: 750px ) {

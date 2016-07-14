@@ -1,11 +1,14 @@
 'use strict';
 
 /* HASH SCROLLING ANIMATION */
-/* Get working to find hash and then add translate to correct offset position.
-document.querySelector('.wrapper-menu').querySelectorAll('a').onclick = (event) => {
-  console.log(event.path[0].baseURI);
-  event.preventDefault();
-} */
+function scrollToHash(hash) {
+  if ( hash !== '' ) {
+    event.preventDefault();
+    let scrollHeight = $(hash)[0].offsetTop;
+    TweenLite.to(window, 1.2, {scrollTo: scrollHeight, ease: Power2.easeOut});
+    history.pushState('', document.title, hash);
+  }
+}
 
 /* PARTICLES.JS */
 particlesJS.load('particles-landing', 'particles-landing.json');
