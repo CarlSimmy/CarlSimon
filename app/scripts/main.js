@@ -26,7 +26,6 @@ function createTrianglePatterns(element, colorX, colorY) {
   document.querySelector(clsName).appendChild(shineDiv);
 }
 
-
 /* ---------------------- HEADER TRIANGLES START -----------------------------*/
 
 /* Finding all the triangle divs in the header and pusing them into an array */
@@ -53,7 +52,7 @@ function deleteHeaderTriangles() {
   // Checking if a div actually contains svgs before looping to remove.
   if ( $('.diamond-1')[0].children.length ) {
     findHeaderTriangles().forEach((triangle) => {
-      while (triangle.hasChildNodes())
+      while ( triangle.hasChildNodes() )
         triangle.removeChild(triangle.firstChild);
     });
   }
@@ -67,9 +66,8 @@ function reRenderHeaderTriangles() {
   createHeaderTriangles();
 }
 
-/* ----------------------- HEADER TRIANGLES END ------------------------------*/
+/* ----------------------- MENU TRIANGLES START ------------------------------*/
 
-/* To create the menu triangles */
 function createMenuTriangles() {
   /* Array.from convert the nodelist to an array */
   Array.from($('.wrapper-menu')[0].children).forEach((menuTriangle) => {
@@ -77,11 +75,33 @@ function createMenuTriangles() {
   })
 }
 
-/* To render all triangles, even ones that don't need to scale on resize */
-function initializeTriangles() {
-  reRenderHeaderTriangles();
+function deleteMenuTriangles() {
+  let childSelector = Array.from($('.wrapper-menu')[0].children);
+  if ( childSelector.length ) {
+    childSelector.forEach((menuTriangle) => {
+      while ( menuTriangle.hasChildNodes() ) {
+        if ( menuTriangle.childNodes[5] ) { // Should find childNodes with nodeName svg instead or something to prevent it from always removing [5] if more elements are added.
+          menuTriangle.removeChild(menuTriangle.childNodes[5]);
+        } else {
+          return;
+        }
+      }
+    });
+  }
+
+  return;
+}
+
+function reRenderMenuTriangles() {
+  deleteMenuTriangles();
   createMenuTriangles();
 }
 
+/* To render all triangles, even ones that don't need to scale on resize */
+function initializeTriangles() {
+  reRenderHeaderTriangles();
+  reRenderMenuTriangles();
+}
+
 window.onload = initializeTriangles();
-window.addEventListener('resize', reRenderHeaderTriangles, true);
+window.addEventListener('resize', initializeTriangles, true);
