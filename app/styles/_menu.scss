@@ -3,8 +3,27 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 260px;
+  height: 100%;
+
   user-select: none;
+  @media ( max-width: 1000px ) {
+    flex-wrap: wrap;
+  }
+  @media ( max-width: 888px ) {
+    width: 70%;
+  }
+  @media ( max-width: 700px ) {
+    width: 100%;
+  }
+  @media ( max-width: 600px ) {
+    width: 70%;
+  }
+  @media ( max-width: 550px ) {
+    width: 80%;
+  }
+  @media ( max-width: 410px ) {
+    width: 100%;
+  }
   a {
     color: #000;
     outline: none;
@@ -18,6 +37,7 @@
     position: relative;
 
     width: 22rem;
+    min-width: 15rem;
     height: 250px;
     margin: 0 $Baseline 0 0;
 
@@ -35,13 +55,23 @@
     }
     @media ( max-width: 650px ) {
       height: 160px;
+
       flex-basis: 25%;
+    }
+    @media ( max-width: 600px ) {
+      margin: 0 1rem 0 0;
+      min-width: 11rem;
+      height: 11rem;
     }
   }
   .menu-portfolio,
   .menu-work,
   .menu-contact {
     margin: 0rem $Baseline;
+
+    @media ( max-width: 600px ) {
+      margin: 0rem 1rem;
+    }
   }
   .menu-about__text,
   .menu-portfolio__text,
@@ -58,6 +88,15 @@
     transform: translate(-40%, -40%);
 
     @include type-setting(5);
+    @media ( max-width: 1000px ) {
+      @include type-setting(4);
+    }
+    @media ( max-width: 600px ) {
+      @include type-setting(3);
+    }
+    @media ( max-width: 550px ) {
+      @include type-setting(2);
+    }
   }
   .menu-about__text--small,
   .menu-portfolio__text--small,
@@ -74,10 +113,19 @@
     letter-spacing: 2px;
 
     transform: translate(-40%, -40%);
-  }
+    @media ( max-width: 1000px ) {
+      margin-left: .5rem;
+    }
+    @media ( max-width: 600px ) {
+      margin-left: .3rem;
 
-  @media ( max-width: 1000px ) {
-    flex-wrap: wrap;
+      line-height: $Baseline * 2;
+    }
+    @media ( max-width: 550px ) {
+      margin-left: .2rem;
+
+      line-height: $Baseline;
+    }
   }
 }
 
@@ -85,7 +133,16 @@
 .menu-portfolio:hover .menu-portfolio__text--small,
 .menu-work:hover .menu-work__text--small,
 .menu-contact:hover .menu-contact__text--small {
-  animation: grow .4s .2s forwards;
+  animation: bigGrow .4s .2s forwards;
+  @media ( max-width: 1000px ) {
+    animation: midGrow .4s .2s forwards;
+  }
+  @media ( max-width: 600px ) {
+    animation: smallGrow .4s .2s forwards;
+  }
+  @media ( max-width: 550px ) {
+    animation: tinyGrow .4s .2s forwards;
+  }
 }
 
 .menu-about:hover .menu-about__text,

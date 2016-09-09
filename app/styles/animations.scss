@@ -1,23 +1,59 @@
-@keyframes grow {
-  from { font-size: 0px; }
-  to { font-size: 2.4rem * (1.333 * 1.333 * 1.333) }
+@keyframes bigGrow {
+  from {
+    font-size: 0;
+  }
+  to {
+    font-size: 2.4rem * (1.333 * 1.333 * 1.333);
+  }
+}
+
+@keyframes midGrow {
+  from {
+    font-size: 0;
+  }
+  to {
+    font-size: 2.4rem * (1.333 * 1.333);
+  }
+}
+
+@keyframes smallGrow {
+  from {
+    font-size: 0;
+  }
+  to {
+    font-size: 2.4rem * 1.333;
+  }
+}
+
+@keyframes tinyGrow {
+  from {
+    font-size: 0;
+  }
+  to {
+    font-size: 2.4rem;
+  }
 }
 
 // SCROLLMAGIC ANIMATION CLASSES
 .menu-about.fade-out {
-  transition: all .5s;
   opacity: 0;
+
+  transition: all .5s;
 }
 
 .particle-delimiter {
   width: 100vw;
   height: 10rem;
 
+  user-select: none;
   &.--landing {
     margin: 3rem -3rem;
   }
-
   &.--menu {
     margin: 3.5rem -3rem;
+
+    &:last-of-type {
+      margin: 3.5rem -3rem 0 -3rem;
+    }
   }
 }

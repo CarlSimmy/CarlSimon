@@ -12,6 +12,14 @@
   text-align: center;
 
   @include type-setting(7);
+
+  @media ( max-width: 900px ) {
+    @include type-setting(6);
+  }
+
+  @media ( max-width: 550px ) {
+    @include type-setting(5);
+  }
 }
 
 .portfolio-text {
@@ -23,4 +31,12 @@
   letter-spacing: 1px;
 
   @include type-setting(1);
+
+  @media ( max-width: 900px ) {
+    @include type-setting(0);
+  }
+
+  @media ( max-width: 550px ) {
+    @include type-setting(-1);
+  }
 }

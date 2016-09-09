@@ -21,9 +21,11 @@ function createTrianglePatterns(element, colorX, colorY) {
 
   document.querySelector(clsName).appendChild(pattern.svg()); // Appending svgs as childs
 
-  let shineDiv = document.createElement('div');
-  shineDiv.className = 'shineDiv';
-  document.querySelector(clsName).appendChild(shineDiv);
+  if ( element.tagName !== 'A' ) { // Prevent menulinks from getting shinedivs
+    let shineDiv = document.createElement('div');
+    shineDiv.className = 'shineDiv';
+    document.querySelector(clsName).appendChild(shineDiv);
+  }
 }
 
 /* ---------------------- HEADER TRIANGLES START -----------------------------*/
@@ -80,8 +82,8 @@ function deleteMenuTriangles() {
   if ( childSelector.length ) {
     childSelector.forEach((menuTriangle) => {
       while ( menuTriangle.hasChildNodes() ) {
-        if ( menuTriangle.childNodes[5] ) { // Should find childNodes with nodeName svg instead or something to prevent it from always removing [5] if more elements are added.
-          menuTriangle.removeChild(menuTriangle.childNodes[5]);
+        if ( menuTriangle.getElementsByTagName('svg')[0] ) {
+          menuTriangle.removeChild(menuTriangle.getElementsByTagName('svg')[0]);
         } else {
           return;
         }
