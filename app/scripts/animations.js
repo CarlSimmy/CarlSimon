@@ -24,10 +24,6 @@ setInterval(() => {
   currentShineDiv.classList.toggle('shine');
 }, Math.floor((Math.random() * 2900) + 1800));
 
-// setInterval(() => {
-//   $('.shineDiv')[Math.floor((Math.random() * $('.shineDiv').length) + 0)].classList.toggle('shine');
-// }, Math.floor((Math.random() * 10000) + 7100));
-
 /* GSAP ANIMATIONS */
 TweenLite.to($('.logotype'), 2, { autoAlpha: 1, y: -35, rotation: 0, ease: Power2.easeOut, delay: 0.5 }); // Fade logo in on load.
 
